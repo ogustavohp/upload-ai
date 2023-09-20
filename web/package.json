@@ -23,6 +23,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@ogustavohp/eslint-config": "^1.1.0"
+    "@ogustavohp/eslint-config": "^1.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.4"
   }
 }
