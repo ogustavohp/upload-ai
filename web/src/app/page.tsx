@@ -121,7 +121,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-2">
-              <Label>Modelo</Label>
+              <Label>Temperatura</Label>
               <Slider min={0} max={1} step={0.1} />
 
               <span className="block text-sm italic text-muted-foreground">
