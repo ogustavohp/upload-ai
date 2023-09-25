@@ -1,0 +1,3 @@
+{
+  "extends": "@ogustavohp/eslint-config/next-node"
+}
