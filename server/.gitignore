@@ -1,2 +1,6 @@
 node_modules
 .env
+exemple.mp3
+tmp
+
+# remover exemple e tmp antes da produção
