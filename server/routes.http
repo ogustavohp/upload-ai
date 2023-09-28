@@ -21,3 +21,14 @@ Content-Type: application/json
 {
   "prompt" : "space today"
 }
+
+###
+# @name generate-ai-completion
+POST http://localhost:3333/ai/generate
+Content-Type: application/json
+
+{
+  "videoId": "833afbe6-e971-40bf-b8c5-13d7ac82d7e7",
+  "template": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''",
+  "temperature": 0.5
+}
