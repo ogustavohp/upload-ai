@@ -15,11 +15,11 @@ Content-Type: audio/mpeg
 
 ###
 # @name create-transcription
-POST http://localhost:3333/video/833afbe6-e971-40bf-b8c5-13d7ac82d7e7/transcription
+POST http://localhost:3333/video/f5e94c46-1b9f-4076-a42c-6a1c5e6be772/transcription
 Content-Type: application/json
 
 {
-  "prompt" : "space today"
+  "prompt" : "Harry Potter"
 }
 
 ###
@@ -28,7 +28,7 @@ POST http://localhost:3333/ai/generate
 Content-Type: application/json
 
 {
-  "videoId": "833afbe6-e971-40bf-b8c5-13d7ac82d7e7",
+  "videoId": "f5e94c46-1b9f-4076-a42c-6a1c5e6be772",
   "template": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''",
   "temperature": 0.5
 }
