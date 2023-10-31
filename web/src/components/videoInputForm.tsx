@@ -66,14 +66,14 @@ export default function VideoInputForm() {
   async function handleUploadVideo(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    // const prompt = promptInputRef.current?.value
+    const prompt = promptInputRef.current?.value
 
     if (!videoFile) {
       return
     }
 
     const audioFile = await convertVideoToAudio(videoFile)
-    console.log(audioFile)
+    console.log(audioFile, prompt)
   }
 
   const previewURL = useMemo(() => {
