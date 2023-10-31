@@ -7,6 +7,7 @@ import { Separator } from '@/components/ui/separator'
 import { Label } from '@/components/ui/label'
 import { getFFmpeg } from '@/lib/ffmpeg'
 import { fetchFile } from '@ffmpeg/util'
+import { api } from '@/lib/axios'
 
 export default function VideoInputForm() {
   const [videoFile, setVideoFile] = useState<File | null>(null)
@@ -73,7 +74,16 @@ export default function VideoInputForm() {
     }
 
     const audioFile = await convertVideoToAudio(videoFile)
-    console.log(audioFile, prompt)
+
+    const data = new FormData()
+
+    data.append('file', audioFile)
+
+    const response = await api.post('/video', data)
+
+    console.log(response.data.video.id)
+
+    // const videoId = response.data.video.id
   }
 
   const previewURL = useMemo(() => {
