@@ -16,6 +16,7 @@ import VideoInputForm from '@/components/videoInputForm'
 import { Github, Wand2 } from 'lucide-react'
 import { useState } from 'react'
 import { useCompletion } from 'ai/react'
+import Link from 'next/link'
 
 export default function Home() {
   const [temperature, setTemperature] = useState(0.5)
@@ -38,10 +39,11 @@ export default function Home() {
       'Content-type': 'application/json',
     },
   })
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="flex items-center justify-between border-b px-6 py-3">
-        <h1 className="text-xl font-bold">upload.ai</h1>
+        <h1 className="text-xl font-bold">VidMind.ai</h1>
 
         <div className="flex items-center gap-3">
           <span className="text-sm text-muted-foreground">
@@ -50,10 +52,12 @@ export default function Home() {
 
           <Separator orientation="vertical" className="h-6" />
 
-          <Button variant="outline">
-            <Github className="mr-2 h-4 w-4" />
-            Github
-          </Button>
+          <Link href="https://github.com/ogustavohp" target="_blank">
+            <Button variant="outline">
+              <Github className="mr-2 h-4 w-4" />
+              Github
+            </Button>
+          </Link>
         </div>
       </header>
 
