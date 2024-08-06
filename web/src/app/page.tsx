@@ -55,7 +55,7 @@ export default function Home() {
           <Link href="https://github.com/ogustavohp" target="_blank">
             <Button variant="outline">
               <Github className="mr-2 h-4 w-4" />
-              Github
+              GitHub
             </Button>
           </Link>
         </div>
